@@ -5,7 +5,7 @@ using namespace std;
 AmericanMahjong::AmericanMahjong(){
     tiles_left = 152;
     set_all_tile();
-//    shuffle_all_tile();
+    shuffle_all_tile();
     
 }
 
@@ -142,9 +142,53 @@ void AmericanMahjong::swap_tiles(int index1, int index2){ // 牌の値をスワ�
     yama[index1]->data = temp_int;
 }
 
-//void AmericanMahjong::print_my_tile(){ cout << yama[0].type << ' ' << yama[0].data << endl;}
-
-/*
-void AmericanMahjong::print_introduction(int gameCount){ // なおして
+void AmericanMahjong::print_my_tile(){ // 自分の牌を表示
+    //-------------プレーヤーの牌を表示----------------
+    cout << "***CARDS***" << endl;
+    cout  << "プレーヤー: ";
+    int length = myCards.size();
+    int i=0;
+    while(i<length){
+        cout << myCards[i]->type << myCards[i]->data << ' ';
+        i++;
+    }
+    
+    //-------------CPU1~4の牌を表示------------------(※プログラム完成後削除する機能)
+    cout  << "\n\nCPU1の牌: " << setw(2);
+    length = cp1Cards.size();
+    i=0;
+    while(i<length){
+        cout << cp1Cards[i]->type << cp1Cards[i]->data << ' ';
+        i++;
+    }
+    
+    cout << "\n\nCPU2の牌: " << setw(2);
+    length = cp2Cards.size();
+    i=0;
+    while(i<length){
+        cout << cp2Cards[i]->type << cp2Cards[i]->data << ' ';
+        i++;
+    }
+    
+    cout << "\n\nCPU3の牌: " << setw(2);
+    length = cp3Cards.size();
+    i=0;
+    while(i<length){
+        cout << cp3Cards[i]->type << cp3Cards[i]->data << ' ';
+        i++;
+    }
+    
+    cout << endl << endl;
+    
 }
-*/
+
+
+void AmericanMahjong::print_introduction(int gameCount, Wind wind){
+    cout << "\n---------------------GAME" << gameCount << "-----------------------\n";
+    cout << "***WINDS***" << endl
+        << "PLAYER: " << wind.myWind[0]
+        << "\nCPU1:   " << wind.myWind[1]
+        << "\nCPU2:   " << wind.myWind[2]
+        << "\nCPU3:   " << wind.myWind[3] << "\n\n\n";
+}
+
