@@ -101,21 +101,33 @@ void AmericanMahjong::set_individual_tile(int wind_num){
         tiles_left--;
     }
     
-    /*この時点で山は152-(13*3+14)、で各プレーヤーに牌が分配されてる状態/
+    /*この時点で山は152-(13*3+14)、で各プレーヤーに牌が分配されてる状態*/
     
-    /*
      
-     if(wind_num==0){ // プレーヤーが親の場合
-     
-     //なおして
-     
-     } else { // プレーヤーが親ではない場合
-     
-     //なおして
-     
+    if(wind_num==0){
+        myCards = tehuda1;
+        cp1Cards = tehuda2;
+        cp2Cards = tehuda3;
+        cp3Cards = tehuda4;
+    }
+    else if(wind_num==1){
+        myCards = tehuda2;
+        cp1Cards = tehuda1;
+        cp2Cards = tehuda3;
+        cp3Cards = tehuda4;
      }
-     
-     */
+    else if(wind_num==2){
+        myCards = tehuda3;
+        cp1Cards = tehuda2;
+        cp2Cards = tehuda1;
+        cp3Cards = tehuda4;
+     }
+    else{
+        myCards = tehuda4;
+        cp1Cards = tehuda2;
+        cp2Cards = tehuda3;
+        cp3Cards = tehuda1;
+    }
 }
 
 

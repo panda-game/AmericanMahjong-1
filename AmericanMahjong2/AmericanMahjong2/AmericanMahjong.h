@@ -20,10 +20,10 @@ class AmericanMahjong
     vector<Tiles*> tehuda2; // tehuda2~4は子用で開始時に13個牌を格納する
     vector<Tiles*> tehuda3;
     vector<Tiles*> tehuda4;
-    vector<Tiles> *myCards; // 手札の牌を格納したベクター用ポインタ
-    vector<Tiles> *cp1Cards; // CP1手札用ポインタ
-    vector<Tiles> *cp2Cards; // CP2手札用ポインタ
-    vector<Tiles> *cp3Cards; // CP3手札用ポインタ
+    vector<Tiles*> myCards; // 手札の牌を格納したベクター用ポインタ
+    vector<Tiles*> cp1Cards; // CP1手札用ポインタ
+    vector<Tiles*> cp2Cards; // CP2手札用ポインタ
+    vector<Tiles*> cp3Cards; // CP3手札用ポインタ
     
 public:
     // コンストラクタ

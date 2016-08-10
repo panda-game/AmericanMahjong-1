@@ -208,7 +208,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AmericanMahjong2/AmericanMahjong.cpp"
@@ -219,6 +219,276 @@
             endingLineNumber = "7"
             landmarkName = "AmericanMahjong::AmericanMahjong()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmericanMahjong2/AmericanMahjong.cpp"
+            timestampString = "492530582.147679"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "AmericanMahjong::set_individual_tile(int wind_num)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmericanMahjong2/AmericanMahjong.cpp"
+            timestampString = "492530582.147679"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "AmericanMahjong::set_individual_tile(int wind_num)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmericanMahjong2/main.cpp"
+            timestampString = "492530127.149635"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "main()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmericanMahjong2/AmericanMahjong.cpp"
+            timestampString = "492530582.147679"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "AmericanMahjong::set_individual_tile(int wind_num)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530258.727397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530258.72767"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "936">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmericanMahjong2/AmericanMahjong.cpp"
+            timestampString = "492530582.147679"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "AmericanMahjong::set_individual_tile(int wind_num)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530425.392748"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530425.39292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "928">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmericanMahjong2/AmericanMahjong.cpp"
+            timestampString = "492530573.098201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "AmericanMahjong::set_individual_tile(int wind_num)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530582.175524"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530582.175698"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "1034">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530582.175868"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "1250">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530582.176035"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "1981">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530582.1762"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "2215">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530582.176365"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "3009">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530582.176522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "3243">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::set_individual_tile(int)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "492530582.176705"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "4037">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
