@@ -61,17 +61,48 @@ void AmericanMahjong::shuffle_all_tile(){
 }
 
 void AmericanMahjong::set_individual_tile(int wind_num){
+void AmericanMahjong::set_individual_tile(int wind_num){
     
+    // tehuda1 14牌格納
     for(int i=1; i<15; i++){
-        char ch = yama[tiles_left-i]->type;
-        int n = yama[tiles_left-i]->data;
+        char ch = yama[tiles_left-1]->type;
+        int n = yama[tiles_left-1]->data;
         Tiles *ptr = new Tiles(ch,n);
         tehuda1.push_back(ptr);
         yama.pop_back();
         tiles_left--;
     }
+    // tehuda2 13牌格納
+    for(int i=1; i<14; i++){
+        char ch = yama[tiles_left-1]->type;
+        int n = yama[tiles_left-1]->data;
+        Tiles *ptr = new Tiles(ch,n);
+        tehuda2.push_back(ptr);
+        yama.pop_back();
+        tiles_left--;
+    }
     
+    // tehuda3 13牌格納
+    for(int i=1; i<14; i++){
+        char ch = yama[tiles_left-1]->type;
+        int n = yama[tiles_left-1]->data;
+        Tiles *ptr = new Tiles(ch,n);
+        tehuda3.push_back(ptr);
+        yama.pop_back();
+        tiles_left--;
+    }
     
+    // tehuda4 13牌格納
+    for(int i=1; i<14; i++){
+        char ch = yama[tiles_left-1]->type;
+        int n = yama[tiles_left-1]->data;
+        Tiles *ptr = new Tiles(ch,n);
+        tehuda4.push_back(ptr);
+        yama.pop_back();
+        tiles_left--;
+    }
+    
+    /*この時点で山は152-(13*3+14)、で各プレーヤーに牌が分配されてる状態/
     
     /*
      
@@ -86,8 +117,9 @@ void AmericanMahjong::set_individual_tile(int wind_num){
      }
      
      */
-    
 }
+
+
 void AmericanMahjong::swap_tiles(int index1, int index2){ // 牌の値をスワップする
     char temp_ch = yama[index2]->type;
     int temp_int = yama[index2]->data;
