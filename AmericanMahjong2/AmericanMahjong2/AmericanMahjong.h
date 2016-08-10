@@ -15,10 +15,10 @@ class AmericanMahjong
 {
     const int NUMTILE = 152; //　全体の牌の数
     vector<Tiles> yama;// 山の牌を格納するベクター
-    vector<Tiles> myTehuda; // 手札の牌を格納
-    vector<Tiles> cp1Tehuda; // CP1手札
-    vector<Tiles> cp2Tehuda; // CP2手札
-    vector<Tiles> cp3Tehuda; // CP3手札
+    vector<Tiles> myCards; // 手札の牌を格納
+    vector<Tiles> cp1Cards; // CP1手札
+    vector<Tiles> cp2Cards; // CP2手札
+    vector<Tiles> cp3Cards; // CP3手札
     
 public:
     // コンストラクタ
