@@ -61,7 +61,6 @@ void AmericanMahjong::shuffle_all_tile(){
 }
 
 void AmericanMahjong::set_individual_tile(int wind_num){
-void AmericanMahjong::set_individual_tile(int wind_num){
     
     // tehuda1 14牌格納
     for(int i=1; i<15; i++){
