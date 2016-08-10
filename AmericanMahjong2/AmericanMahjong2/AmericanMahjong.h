@@ -14,11 +14,16 @@ using namespace std;
 class AmericanMahjong
 {
     const int NUMTILE = 152; //　全体の牌の数
-    vector<Tiles> yama;// 山の牌を格納するベクター
-    vector<Tiles> myCards; // 手札の牌を格納
-    vector<Tiles> cp1Cards; // CP1手札
-    vector<Tiles> cp2Cards; // CP2手札
-    vector<Tiles> cp3Cards; // CP3手札
+    int tiles_left; // 山に残った牌の数. 牌が配られる度にtiles_left--され,0になるとゲーム終了
+    vector<Tiles*> yama;// 山の牌を格納するベクター
+    vector<Tiles*> tehuda1; // 親用 tehuda1のみ開始時に14個牌を格納する
+    vector<Tiles*> tehuda2; // tehuda2~4は子用で開始時に13個牌を格納する
+    vector<Tiles*> tehuda3;
+    vector<Tiles*> tehuda4;
+    vector<Tiles> *myCards; // 手札の牌を格納したベクター用ポインタ
+    vector<Tiles> *cp1Cards; // CP1手札用ポインタ
+    vector<Tiles> *cp2Cards; // CP2手札用ポインタ
+    vector<Tiles> *cp3Cards; // CP3手札用ポインタ
     
 public:
     // コンストラクタ
@@ -29,7 +34,7 @@ public:
 
     void set_all_tile(); // 152個の牌を作成しベクターに入れる
     void shuffle_all_tile(); // 牌をシャッフルする
-    void set_individual_tile(bool isPlayerEast); // 各プレーヤーの牌をセットする
+    void set_individual_tile(int wind_num); // 各プレーヤーの牌をセットする
     void swap_tiles(int index1,int index2); //索引1と索引2のタイプとデータを入れ替える
     void print_my_tile(); // 手札を表示
     void print_introduction(int gameCount); // 今回のサイコロの数字と各プレーヤーの風を表示
