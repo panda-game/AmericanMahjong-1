@@ -5,7 +5,7 @@ using namespace std;
 AmericanMahjong::AmericanMahjong(){
     tiles_left = 152;
     set_all_tile();
-//    shuffle_all_tile();
+    shuffle_all_tile();
     
 }
 
@@ -100,24 +100,35 @@ void AmericanMahjong::set_individual_tile(int wind_num){
         yama.pop_back();
         tiles_left--;
     }
-    
-    sort_tiles(tehuda1); // 牌をソート
 
-    /*この時点で山は152-(13*3+14)、で各プレーヤーに牌が分配されてる状態/
-    
-    /*
-     
-     if(wind_num==0){ // プレーヤーが親の場合
-     
-     //なおして
-     
-     } else { // プレーヤーが親ではない場合
-     
-     //なおして
-     
+    /*この時点で山は152-(13*3+14)、で各プレーヤーに牌が分配されてる状態*/
+
+    if(wind_num==0){
+        myCards = tehuda1;
+        cp1Cards = tehuda2;
+        cp2Cards = tehuda3;
+        cp3Cards = tehuda4;
+    }
+    else if(wind_num==1){
+        myCards = tehuda2;
+        cp1Cards = tehuda1;
+        cp2Cards = tehuda3;
+        cp3Cards = tehuda4;
      }
-     
-     */
+    else if(wind_num==2){
+        myCards = tehuda3;
+        cp1Cards = tehuda2;
+        cp2Cards = tehuda1;
+        cp3Cards = tehuda4;
+     }
+    else{
+        myCards = tehuda4;
+        cp1Cards = tehuda2;
+        cp2Cards = tehuda3;
+        cp3Cards = tehuda1;
+    }
+    
+    sort_player_tiles(); // 牌をソート
 }
 
 
@@ -132,13 +143,68 @@ void AmericanMahjong::swap_tiles(int index1, int index2){ // 牌の値をスワ�
     yama[index1]->data = temp_int;
 }
 
-void AmericanMahjong::sort_tiles(vector<Tiles*> cards){ // プレイヤーのカードをソート
-    std::sort(cards.begin(), cards.end());
+void AmericanMahjong::sort_player_tiles(){ // プレイヤーのカードをソート
+    
+    std::sort(myCards.begin(), myCards.end(),
+              [] (const Tiles* l, const Tiles* r)
+              {   // 数値順にソート
+                  return l->data < r->data;
+              });
+    
+    std::sort(myCards.begin(), myCards.end(),
+              [] (const Tiles* l, const Tiles* r)
+              {   // タイプ順にソート
+                  return l->type < r->type;
+              });
 }
 
 //void AmericanMahjong::print_my_tile(){ cout << yama[0].type << ' ' << yama[0].data << endl;}
-
-/*
-void AmericanMahjong::print_introduction(int gameCount){ // なおして
+void AmericanMahjong::print_my_tile(){ // 自分の牌を表示
+    //-------------プレーヤーの牌を表示----------------
+    cout << "***CARDS***" << endl;
+    cout  << "プレーヤー: ";
+    int length = myCards.size();
+    int i=0;
+    while(i<length){
+        cout << myCards[i]->type << myCards[i]->data << ' ';
+        i++;
+    }
+    
+    //-------------CPU1~4の牌を表示------------------(※プログラム完成後削除する機能)
+    cout  << "\n\nCPU1の牌: " << setw(2);
+    length = cp1Cards.size();
+    i=0;
+    while(i<length){
+        cout << cp1Cards[i]->type << cp1Cards[i]->data << ' ';
+        i++;
+    }
+    
+    cout << "\n\nCPU2の牌: " << setw(2);
+    length = cp2Cards.size();
+    i=0;
+    while(i<length){
+        cout << cp2Cards[i]->type << cp2Cards[i]->data << ' ';
+        i++;
+    }
+    
+    cout << "\n\nCPU3の牌: " << setw(2);
+    length = cp3Cards.size();
+    i=0;
+    while(i<length){
+        cout << cp3Cards[i]->type << cp3Cards[i]->data << ' ';
+        i++;
+    }
+    
+    cout << endl << endl;
+    
 }
-*/
+
+void AmericanMahjong::print_introduction(int gameCount, Wind wind){
+    cout << "\n---------------------GAME" << gameCount << "-----------------------\n";
+    cout << "***WINDS***" << endl
+        << "PLAYER: " << wind.myWind[0]
+        << "\nCPU1:   " << wind.myWind[1]
+        << "\nCPU2:   " << wind.myWind[2]
+        << "\nCPU3:   " << wind.myWind[3] << "\n\n\n";
+}
+
