@@ -11,9 +11,9 @@ int main(){
     cout << "===========LET'S PLAY AMERICAN MAHJONG==========\n";
     int gameCount = 1;
     myMahjong.print_introduction(gameCount, winds); // ゲーム開始時のメッセージを表示する
-
     myMahjong.set_individual_tile(wind_num); // 各プレーヤーの牌を用意する
     myMahjong.print_my_tile(); // 自分とCPUの牌を表示
+
     
     
     

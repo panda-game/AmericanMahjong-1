@@ -61,7 +61,7 @@ void AmericanMahjong::shuffle_all_tile(){
 }
 
 void AmericanMahjong::set_individual_tile(int wind_num){
-    
+      
     // tehuda1 14牌格納
     for(int i=1; i<15; i++){
         char ch = yama[tiles_left-1]->type;
@@ -100,10 +100,9 @@ void AmericanMahjong::set_individual_tile(int wind_num){
         yama.pop_back();
         tiles_left--;
     }
-    
+
     /*この時点で山は152-(13*3+14)、で各プレーヤーに牌が分配されてる状態*/
-    
-     
+
     if(wind_num==0){
         myCards = tehuda1;
         cp1Cards = tehuda2;
@@ -128,6 +127,8 @@ void AmericanMahjong::set_individual_tile(int wind_num){
         cp2Cards = tehuda3;
         cp3Cards = tehuda1;
     }
+    
+    sort_player_tiles(); // 牌をソート
 }
 
 
@@ -142,6 +143,22 @@ void AmericanMahjong::swap_tiles(int index1, int index2){ // 牌の値をスワ�
     yama[index1]->data = temp_int;
 }
 
+void AmericanMahjong::sort_player_tiles(){ // プレイヤーのカードをソート
+    
+    std::sort(myCards.begin(), myCards.end(),
+              [] (const Tiles* l, const Tiles* r)
+              {   // 数値順にソート
+                  return l->data < r->data;
+              });
+    
+    std::sort(myCards.begin(), myCards.end(),
+              [] (const Tiles* l, const Tiles* r)
+              {   // タイプ順にソート
+                  return l->type < r->type;
+              });
+}
+
+//void AmericanMahjong::print_my_tile(){ cout << yama[0].type << ' ' << yama[0].data << endl;}
 void AmericanMahjong::print_my_tile(){ // 自分の牌を表示
     //-------------プレーヤーの牌を表示----------------
     cout << "***CARDS***" << endl;
@@ -181,7 +198,6 @@ void AmericanMahjong::print_my_tile(){ // 自分の牌を表示
     cout << endl << endl;
     
 }
-
 
 void AmericanMahjong::print_introduction(int gameCount, Wind wind){
     cout << "\n---------------------GAME" << gameCount << "-----------------------\n";
