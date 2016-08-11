@@ -11,7 +11,8 @@ int main(){
     int gameCount = 1;
     cout << "\n---------------------GAME" << gameCount << "-----------------------\n";
 
-    //myMahjong.set_individual_tile(wind_num); // 自分とCPUの牌を表示
+    myMahjong.set_individual_tile(wind_num); // 自分とCPUの牌を表示
+    
     
     
     

@@ -8,6 +8,7 @@
 #include <ctime> // time
 #include <vector> // vector
 #include <string>
+#include <algorithm> // sort
 
 using namespace std;
 
@@ -38,6 +39,7 @@ public:
     void swap_tiles(int index1,int index2); //索引1と索引2のタイプとデータを入れ替える
     void print_my_tile(); // 手札を表示
     void print_introduction(int gameCount); // 今回のサイコロの数字と各プレーヤーの風を表示
+    void sort_tiles(vector<Tiles*>); // 牌をソート
  };
 
 

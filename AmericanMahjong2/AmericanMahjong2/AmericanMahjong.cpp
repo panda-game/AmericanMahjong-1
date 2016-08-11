@@ -61,7 +61,7 @@ void AmericanMahjong::shuffle_all_tile(){
 }
 
 void AmericanMahjong::set_individual_tile(int wind_num){
-    
+      
     // tehuda1 14牌格納
     for(int i=1; i<15; i++){
         char ch = yama[tiles_left-1]->type;
@@ -101,6 +101,8 @@ void AmericanMahjong::set_individual_tile(int wind_num){
         tiles_left--;
     }
     
+    sort_tiles(tehuda1); // 牌をソート
+
     /*この時点で山は152-(13*3+14)、で各プレーヤーに牌が分配されてる状態/
     
     /*
@@ -128,6 +130,10 @@ void AmericanMahjong::swap_tiles(int index1, int index2){ // 牌の値をスワ�
     
     yama[index1]->type = temp_ch;
     yama[index1]->data = temp_int;
+}
+
+void AmericanMahjong::sort_tiles(vector<Tiles*> cards){ // プレイヤーのカードをソート
+    std::sort(cards.begin(), cards.end());
 }
 
 //void AmericanMahjong::print_my_tile(){ cout << yama[0].type << ' ' << yama[0].data << endl;}
