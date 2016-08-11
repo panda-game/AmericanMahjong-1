@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    srand (time(NULL));
+    srand (static_cast<unsigned int>(time(NULL)));
     int wind_num = rand()%4; // 0-3の整数をランダムに生成
     Wind winds(wind_num);
     
@@ -14,6 +14,7 @@ int main(){
     myMahjong.set_individual_tile(wind_num); // 各プレーヤーの牌を用意する
     myMahjong.print_my_tile(); // 自分とCPUの牌を表示
 
+    cout << "***TRADING TILES***\n" << endl; // ここから牌の交換を行う
     
     
     

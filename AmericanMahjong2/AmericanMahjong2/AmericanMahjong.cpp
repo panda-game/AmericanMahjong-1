@@ -53,10 +53,11 @@ void AmericanMahjong::set_all_tile(){// 牌を山にセットする
 }
 
 void AmericanMahjong::shuffle_all_tile(){
-    srand (time(NULL));
+    srand (static_cast<unsigned int>(time(NULL)));
     for(int i=0; i<NUMTILE; i++){ // 配列を横断しtiles[i]を値をランダムで別の値にスワップしシャッフルする
         int rand_pos = rand()%152;
-        swap_tiles(i,rand_pos); // 牌の値をスワップする
+        swap_ptrs(i,rand_pos);
+//      swap_tiles(i,rand_pos); // 牌のポインタをスワップする
     }
 }
 
@@ -68,6 +69,7 @@ void AmericanMahjong::set_individual_tile(int wind_num){
         int n = yama[tiles_left-1]->data;
         Tiles *ptr = new Tiles(ch,n);
         tehuda1.push_back(ptr);
+        delete (ptr); // メモリを開放
         yama.pop_back();
         tiles_left--;
     }
@@ -77,6 +79,7 @@ void AmericanMahjong::set_individual_tile(int wind_num){
         int n = yama[tiles_left-1]->data;
         Tiles *ptr = new Tiles(ch,n);
         tehuda2.push_back(ptr);
+        delete (ptr); // メモリを開放
         yama.pop_back();
         tiles_left--;
     }
@@ -87,6 +90,7 @@ void AmericanMahjong::set_individual_tile(int wind_num){
         int n = yama[tiles_left-1]->data;
         Tiles *ptr = new Tiles(ch,n);
         tehuda3.push_back(ptr);
+        delete (ptr); // メモリを開放
         yama.pop_back();
         tiles_left--;
     }
@@ -97,6 +101,7 @@ void AmericanMahjong::set_individual_tile(int wind_num){
         int n = yama[tiles_left-1]->data;
         Tiles *ptr = new Tiles(ch,n);
         tehuda4.push_back(ptr);
+        delete (ptr); // メモリを開放
         yama.pop_back();
         tiles_left--;
     }
@@ -131,27 +136,22 @@ void AmericanMahjong::set_individual_tile(int wind_num){
     sort_player_tiles(); // 牌をソート
 }
 
-
-void AmericanMahjong::swap_tiles(int index1, int index2){ // 牌の値をスワップする
-    char temp_ch = yama[index2]->type;
-    int temp_int = yama[index2]->data;
-    
-    yama[index2]->type = yama[index1]->type;
-    yama[index2]->data = yama[index1]->data;
-    
-    yama[index1]->type = temp_ch;
-    yama[index1]->data = temp_int;
+void AmericanMahjong::swap_ptrs(int index1, int index2){ //index1とindex2のポインタをスワップ
+    Tiles *temp = yama[index1];
+    yama[index1] = yama[index2];
+    yama[index2] = temp;
 }
+
 
 void AmericanMahjong::sort_player_tiles(){ // プレイヤーのカードをソート
     
-    std::sort(myCards.begin(), myCards.end(),
+    sort(myCards.begin(), myCards.end(),
               [] (const Tiles* l, const Tiles* r)
               {   // 数値順にソート
                   return l->data < r->data;
               });
     
-    std::sort(myCards.begin(), myCards.end(),
+    sort(myCards.begin(), myCards.end(),
               [] (const Tiles* l, const Tiles* r)
               {   // タイプ順にソート
                   return l->type < r->type;
@@ -163,32 +163,40 @@ void AmericanMahjong::print_my_tile(){ // 自分の牌を表示
     //-------------プレーヤーの牌を表示----------------
     cout << "***CARDS***" << endl;
     cout  << "プレーヤー: ";
-    int length = myCards.size();
+    int length = static_cast<unsigned int>(myCards.size());
     int i=0;
     while(i<length){
-        cout << myCards[i]->type << myCards[i]->data << ' ';
+        cout << myCards[i]->type << myCards[i]->data << "  ";
+        i++;
+    }
+    
+    // 捨てる牌を選択するときの数字
+    i=0;
+    cout << "\n牌選択用:   ";
+    while(i<length){
+        cout << left << setw(4) << i+1 ;
         i++;
     }
     
     //-------------CPU1~4の牌を表示------------------(※プログラム完成後削除する機能)
-    cout  << "\n\nCPU1の牌: " << setw(2);
-    length = cp1Cards.size();
+    cout  << "\n\nCPU1の牌: ";
+    length = static_cast<unsigned int>(cp1Cards.size());
     i=0;
     while(i<length){
         cout << cp1Cards[i]->type << cp1Cards[i]->data << ' ';
         i++;
     }
     
-    cout << "\n\nCPU2の牌: " << setw(2);
-    length = cp2Cards.size();
+    cout << "\n\nCPU2の牌: ";
+    length = static_cast<unsigned int>(cp2Cards.size());
     i=0;
     while(i<length){
         cout << cp2Cards[i]->type << cp2Cards[i]->data << ' ';
         i++;
     }
     
-    cout << "\n\nCPU3の牌: " << setw(2);
-    length = cp3Cards.size();
+    cout << "\n\nCPU3の牌: ";
+    length = static_cast<unsigned int>(cp3Cards.size());
     i=0;
     while(i<length){
         cout << cp3Cards[i]->type << cp3Cards[i]->data << ' ';
@@ -208,3 +216,47 @@ void AmericanMahjong::print_introduction(int gameCount, Wind wind){
         << "\nCPU3:   " << wind.myWind[3] << "\n\n\n";
 }
 
+
+void AmericanMahjong::trade_tiles(){
+    /*---------牌の交換について----------
+     -牌の交換はゲーム序盤にプレーヤー同士で行い、
+     交換をすることでプレーヤーや狙った役に必要な牌を集めたり自分に必要の無い牌を手札から除外したりできる
+     
+     ------------交換の手順-------------
+     1.右隣のプレーヤーへ牌を３つ送り,左隣のプレーヤーから牌を３つもらう
+     2.向かい合わせのプレーヤーへ牌を３つ交換する
+     3.1左隣のプレーヤーへ牌を３つ送り,右隣のプレーヤーから牌を３つもらう
+     3.2この際,もしプレーヤーが手持ちの牌を出したく無い場合は,右隣のプレーヤーの牌をブラインドパスできる
+     4.向かい合わせのプレーヤーと最大３つまで牌を交換する
+     5.1メッシュ:各プレーヤーは最大４つまで牌を出す
+     5.2親から反時計回りの順番に各プレーヤーは自分の出した牌の数だけ牌を取る
+     以上
+     */
+    
+    int tile1, tile2, tile3; // 捨てる牌の索引を入手する
+    cout << "SELECT 3 TILES TO GIVE TO RIGHT NEXT PLAYER: ";
+    cin >> tile1 >> tile2 >> tile3;
+    
+    
+    Tiles *temp1, *temp2, *temp3;
+    
+    
+    //=====================ここから作業=========================
+    
+}
+
+
+
+
+//-------------------------作ったけど使わないかもしれないメンバ関数--------------------------
+
+//void AmericanMahjong::swap_tiles(int index1, int index2){ // 牌の値をスワップする
+//    char temp_ch = yama[index2]->type;
+//    int temp_int = yama[index2]->data;
+//
+//    yama[index2]->type = yama[index1]->type;
+//    yama[index2]->data = yama[index1]->data;
+//
+//    yama[index1]->type = temp_ch;
+//    yama[index1]->data = temp_int;
+//}

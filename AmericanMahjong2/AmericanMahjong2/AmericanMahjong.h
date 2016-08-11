@@ -38,10 +38,13 @@ public:
     void set_all_tile(); // 152個の牌を作成しベクターに入れる
     void shuffle_all_tile(); // 牌をシャッフルする
     void set_individual_tile(int wind_num); // 各プレーヤーの牌をセットする
-    void swap_tiles(int index1,int index2); //索引1と索引2のタイプとデータを入れ替える
+    void swap_ptrs(int index1, int index2); //索引1と索引2のポインタを入れ替える
+//  void swap_tiles(int index1,int index2); //索引1と索引2のタイプとデータを入れ替える
     void print_my_tile(); // 手札を表示
     void sort_player_tiles(); // 牌をソート
     void print_introduction(int gameCount, Wind wind); // 今回のサイコロの数字と各プレーヤーの風を表示
+    void trade_tiles(); //　牌を交換する
+    void paste_tile_data(); // 牌の情報をindex1からindex2へコピペする
  };
 
 
