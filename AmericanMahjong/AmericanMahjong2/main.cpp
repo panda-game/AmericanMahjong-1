@@ -12,10 +12,15 @@ int main(){
     int gameCount = 1;
     myMahjong.print_introduction(gameCount, winds); // ゲーム開始時のメッセージを表示する
     myMahjong.set_individual_tile(wind_num); // 各プレーヤーの牌を用意する
+    cout << "***CARDS***\n";
     myMahjong.print_my_tile(); // 自分とCPUの牌を表示
 
-    cout << "***TRADING TILES***\n" << endl; // ここから牌の交換を行う
-    
+    cout << "***TRADING TILES***"; // ここから牌の交換を行う
+//  myMahjong.trade_tiles1();
+    cout << "\n***AFTER FIRST TRADE***\n";
+    myMahjong.print_my_tile();
+    myMahjong.trade_tiles2();
+    myMahjong.print_my_tile();
     
     
     
