@@ -38,7 +38,7 @@ public:
     void shuffle_all_tile(); // 牌をシャッフルする
     void set_individual_tile(int wind_num); // 各プレーヤーの牌をセットする
     void swap_ptrs_index(int index1, int index2); //索引1と索引2のポインタを入れ替える
-    void swap_ptrs_pointer(Tiles* ptr, Tiles*ptr2); //ポインタを入れ替える
+    void swap_ptrs_pointer(Tiles* &ptr, Tiles* &ptr2); //ポインタを入れ替える
     void print_my_tile(); // 手札を表示
     void print_tile(Tiles* ptr); // 牌の情報を表示する
     void sort_player_tiles(); // 牌をソート
@@ -46,7 +46,12 @@ public:
     void trade_tiles1(); //　牌を交換する(1回目)
     void trade_tiles2(); //　牌を交換する(2回目)
     void trade_tiles3(); //　牌を交換する(3回目)
+    void trade_tiles4(); // 向かい側の人と牌を交換(0~3個まで)
+    void trade_tiles5(); // メッシュ交換
+    void discard_tile(Tiles* ptr); // 牌を捨てる
+    void get_tehuda_index(int &a, int &b, int &c); // 交換する牌の索引を入手する(牌の交換時に必要な情報)
     void generate_random_three(int &a, int &b, int &c, unsigned int size); // ランダムに異なる3つの数字を生成する
+    int get_tiles_left(){ return tiles_left; }
 //  void swap_tiles(int index1,int index2); //索引1と索引2のタイプとデータを入れ替える
 };
 

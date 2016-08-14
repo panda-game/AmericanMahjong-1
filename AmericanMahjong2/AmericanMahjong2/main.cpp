@@ -15,12 +15,38 @@ int main(){
     cout << "***CARDS***\n";
     myMahjong.print_my_tile(); // 自分とCPUの牌を表示
 
-    cout << "***TRADING TILES***"; // ここから牌の交換を行う
-//  myMahjong.trade_tiles1();
-    cout << "\n***AFTER FIRST TRADE***\n";
-    myMahjong.print_my_tile();
-    myMahjong.trade_tiles2();
-    myMahjong.print_my_tile();
+//    cout << "*** TRADING TILES1 ***"; // ここから牌の交換を行う
+//    myMahjong.trade_tiles1();
+//    cout << "\n*** AFTER FIRST TRADE ***\n";
+//    myMahjong.print_my_tile();
+//    cout << "*** TRADING TILES2 ***";
+//    myMahjong.trade_tiles2();
+//    cout << "\n*** AFTER SECOND TRADE ***\n";
+//    myMahjong.print_my_tile();
+//    cout << "*** TRADING TILES3 ***";
+//    myMahjong.trade_tiles3();
+//    cout << "\n*** AFTER THIRD TRADE ***\n";
+//    myMahjong.print_my_tile();
+//    cout << "*** TRADING TILES4 ***";
+//    myMahjong.trade_tiles4();
+//    cout << "\n*** AFTER FORTH TRADE ***\n";
+//    myMahjong.print_my_tile();
+//    cout << "*** TRADING TILES5 ***";
+//    myMahjong.trade_tiles5();
+//    cout << "\n*** AFTER FIFTH TRADE ***\n";
+//    myMahjong.print_my_tile();
+    
+    while(myMahjong.get_tiles_left() != 0){
+        /*----------ゲームの流れについて-------------
+         1.東のプレーヤーがまず牌を捨てる (この時牌は山からひかない)
+         2.東西南北の順に牌を捨てる (親以外は牌を引く)*/
+        
+        /********************************************
+                    次回ここから作業 (祐二郎)
+         ********************************************/
+        break;
+    }
+    
     
     
     
