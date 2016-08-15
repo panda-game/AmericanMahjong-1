@@ -406,6 +406,17 @@ void AmericanMahjong::generate_random_three(int &a, int &b, int &c, unsigned int
 }
 
 /********************************************
-               ここのコード頼む
+               デストラクタ
  ********************************************/
-AmericanMahjong::~AmericanMahjong(){} // デストラクタ
+AmericanMahjong::~AmericanMahjong(){
+    vector<int> arr(5);
+    cout << yama.size() << "\n\n";
+    cout << yama.capacity()  << "\n\n";
+    cout << sizeof(yama) << "\n\n";
+    std::vector<Tiles*>().swap(yama);
+    cout << "destructor\n";
+    cout << yama.size()  << "\n\n";
+    cout << yama.capacity()  << "\n\n";
+    cout << sizeof(yama) << "\n\n";
+}
+
