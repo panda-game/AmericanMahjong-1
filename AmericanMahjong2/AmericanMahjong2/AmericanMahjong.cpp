@@ -444,7 +444,6 @@ void AmericanMahjong::generate_random_three(int &a, int &b, int &c, unsigned int
     }
 }
 
-
 AmericanMahjong::~AmericanMahjong(){ // デストラクタ
     cout << "\n\nCALLING DESTRUCTOR.\n\n";
     int i=0;
