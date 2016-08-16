@@ -386,6 +386,45 @@ void AmericanMahjong::trade_tiles5(){
     cout << "";
 }
 
+void AmericanMahjong::start_game(){
+    while(true){
+        /*----------ゲームの流れについて-------------
+         1.東のプレーヤーがまず牌を捨てる (この時牌は山からひかない)
+         2.東西南北の順に牌を捨てる (親以外は牌を引く)*/
+        
+        /********************************************
+         次回ここから作業 (祐二郎)
+         ********************************************/
+        break;
+    }
+    
+}
+
+void AmericanMahjong::get_tile(vector<Tiles*> cards){
+    cards.push_back(yama[tiles_left-1]); // yamaから一つ牌をcardsにプッシュする
+    if(cards == myCards){// プレイヤーの手札に牌が来た時は教えてあげる
+        cout << "YOU GOT ";
+        print_tile(yama[tiles_left-1]);
+        cout << endl;
+    }
+    sort_player_tiles(); // 牌をソート
+    tiles_left--; // 牌を一つ減少
+}
+
+
+
+void AmericanMahjong::discard_tile_CPU(vector<Tiles*> cards){
+    int index = static_cast<unsigned int>(cards.size()); // ランダムに捨てる牌の索引を生成
+    cards.erase(cards.begin()+index); // ベクターから削除
+}
+
+void AmericanMahjong::discard_tile_player(){
+    cout << "SELECT INDEX OF TILE YOU WANT TO DISCARD: ";
+    int index;
+    cin >> index;
+    myCards.erase(myCards.begin()+(index - 1)); // 索引の牌をベクターから削除
+}
+
 void AmericanMahjong::get_tehuda_index(int &a, int &b, int &c){
     cout << "\nFIRST TILE INDEX:";
     cin >> a;
@@ -405,7 +444,12 @@ void AmericanMahjong::generate_random_three(int &a, int &b, int &c, unsigned int
     }
 }
 
-/********************************************
-               ここのコード頼む
- ********************************************/
-AmericanMahjong::~AmericanMahjong(){} // デストラクタ
+
+AmericanMahjong::~AmericanMahjong(){ // デストラクタ
+    cout << "\n\nCALLING DESTRUCTOR.\n\n";
+    int i=0;
+    while(i<NUMTILE){
+        delete yama[i];
+        i++;
+    }
+}

@@ -2,6 +2,7 @@
 using namespace std;
 
 int main(){
+    {
     srand (static_cast<unsigned int>(time(NULL)));
     int wind_num = rand()%4; // 0-3の整数をランダムに生成
     Wind winds(wind_num);
@@ -36,30 +37,23 @@ int main(){
 //    cout << "\n*** AFTER FIFTH TRADE ***\n";
 //    myMahjong.print_my_tile();
     
-    while(myMahjong.get_tiles_left() != 0){
-        /*----------ゲームの流れについて-------------
-         1.東のプレーヤーがまず牌を捨てる (この時牌は山からひかない)
-         2.東西南北の順に牌を捨てる (親以外は牌を引く)*/
-        
-        /********************************************
-                    次回ここから作業 (祐二郎)
-         ********************************************/
-        break;
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     return 0;
 }
