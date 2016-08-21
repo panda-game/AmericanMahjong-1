@@ -386,18 +386,25 @@ void AmericanMahjong::trade_tiles5(){
     cout << "";
 }
 
-void AmericanMahjong::start_game(){
-    while(true){
-        /*----------ゲームの流れについて-------------
-         1.東のプレーヤーがまず牌を捨てる (この時牌は山からひかない)
-         2.東西南北の順に牌を捨てる (親以外は牌を引く)*/
-        
-        /********************************************
-         次回ここから作業 (祐二郎)
-         ********************************************/
-        break;
+void AmericanMahjong::start_game(Wind wind){
+    cards.push_back(&myCards);
+    cards.push_back(&cp1Cards);
+    cards.push_back(&cp2Cards);
+    cards.push_back(&cp3Cards);
+    
+    int i;
+    if(wind.myWind[0] == "EAST"){
+        i=0;
+        discard_tile_player();
+    }
+    else {
+        if(wind.myWind[1] == "EAST") i=1;
+        else if(wind.myWind[2] == "EAST") i=2;
+        else i=3;
+        discard_tile_CPU(i);
     }
     
+
 }
 
 void AmericanMahjong::get_tile(vector<Tiles*> cards){
@@ -413,9 +420,9 @@ void AmericanMahjong::get_tile(vector<Tiles*> cards){
 
 
 
-void AmericanMahjong::discard_tile_CPU(vector<Tiles*> cards){
-    int index = static_cast<unsigned int>(cards.size()); // ランダムに捨てる牌の索引を生成
-    cards.erase(cards.begin()+index); // ベクターから削除
+void AmericanMahjong::discard_tile_CPU(int i){
+    int index = rand()%(static_cast<unsigned int>((*cards[i]).size())); // ランダムに捨てる牌の索引を生成
+    (*cards[i]).erase((*cards[i]).begin()+index); // 索引indexにあるタイルをベクターから削除
 }
 
 void AmericanMahjong::discard_tile_player(){

@@ -604,12 +604,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AmericanMahjong2/AmericanMahjong.cpp"
-            timestampString = "492969564.157795"
+            timestampString = "493432318.08387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "450"
-            endingLineNumber = "450"
-            landmarkName = "AmericanMahjong::~AmericanMahjong()"
+            startingLineNumber = "447"
+            endingLineNumber = "447"
+            landmarkName = "AmericanMahjong::generate_random_three(int &amp;a, int &amp;b, int &amp;c, unsigned int size)"
             landmarkType = "5">
             <Locations>
                <Location
@@ -641,6 +641,100 @@
                   offsetFromSymbolStart = "12">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmericanMahjong2/main.cpp"
+            timestampString = "493400752.352432"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "main()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmericanMahjong2/AmericanMahjong.cpp"
+            timestampString = "493432318.08387"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "424"
+            endingLineNumber = "424"
+            landmarkName = "AmericanMahjong::discard_tile_CPU(int i)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::discard_tile_CPU(std::__1::vector&lt;Tiles*, std::__1::allocator&lt;Tiles*&gt; &gt;&amp;)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "493408717.809796"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "425"
+                  endingLineNumber = "425"
+                  offsetFromSymbolStart = "43">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AmericanMahjong::discard_tile_CPU(std::__1::vector&lt;Tiles*, std::__1::allocator&lt;Tiles*&gt; &gt;&amp;)"
+                  moduleName = "AmericanMahjong2"
+                  urlString = "file:///Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp"
+                  timestampString = "493408717.81011"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "425"
+                  endingLineNumber = "425"
+                  offsetFromSymbolStart = "90">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmericanMahjong2/AmericanMahjong.cpp"
+            timestampString = "493432318.08387"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "425"
+            endingLineNumber = "425"
+            landmarkName = "AmericanMahjong::discard_tile_CPU(int i)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AmericanMahjong2/AmericanMahjong.h"
+            timestampString = "493431471.494781"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "class AmericanMahjong"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

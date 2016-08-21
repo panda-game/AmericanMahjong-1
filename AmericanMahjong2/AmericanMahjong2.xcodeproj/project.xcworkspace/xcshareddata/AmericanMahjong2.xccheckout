@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>61972A71-D460-464E-AD2A-732AD250AC72</string>
+	<string>0A0B6DEF-74B3-4426-AA43-07496A0ECA7C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AmericanMahjong2</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4ACDC72D-7CD0-454B-ABE9-EEA160AD3FDD</key>
-		<string>ssh://github.com/ynbenson/AmericanMahjong3.git</string>
+		<key>18E2B006-0B80-4F5D-883D-6B13613A8E8C</key>
+		<string>ssh://github.com/ynbenson/AmericanMahjong.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>AmericanMahjong2/AmericanMahjong2.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4ACDC72D-7CD0-454B-ABE9-EEA160AD3FDD</key>
+		<key>18E2B006-0B80-4F5D-883D-6B13613A8E8C</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/ynbenson/AmericanMahjong3.git</string>
+	<string>ssh://github.com/ynbenson/AmericanMahjong.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4ACDC72D-7CD0-454B-ABE9-EEA160AD3FDD</string>
+	<string>18E2B006-0B80-4F5D-883D-6B13613A8E8C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4ACDC72D-7CD0-454B-ABE9-EEA160AD3FDD</string>
+			<string>18E2B006-0B80-4F5D-883D-6B13613A8E8C</string>
 			<key>IDESourceControlWCCName</key>
-			<string>AmericanMahjong3</string>
+			<string>AmericanMahjong</string>
 		</dict>
 	</array>
 </dict>

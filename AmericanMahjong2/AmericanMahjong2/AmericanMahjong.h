@@ -27,6 +27,7 @@ class AmericanMahjong
     vector<Tiles*> cp2Cards; // CP2手札用ポインタ
     vector<Tiles*> cp3Cards; // CP3手札用ポインタ
     vector<Tiles*> tmpCards; // ソート用の一時的なベクター
+    vector<vector<Tiles*>*> cards; // ベクターのベクター
 public:
     AmericanMahjong(); // コンストラクタ
     ~AmericanMahjong(); // デストラクタ
@@ -47,9 +48,9 @@ public:
     void trade_tiles3(); //　牌を交換する(3回目)
     void trade_tiles4(); // 向かい側の人と牌を交換(0~3個まで)
     void trade_tiles5(); // メッシュ交換
-    void start_game(); // ゲームを実際に開始する
+    void start_game(Wind wind); // ゲームを実際に開始する
     void get_tile(vector<Tiles*> cards); // 牌を引く
-    void discard_tile_CPU(vector<Tiles*> cards); // CPUが牌を捨てる機能
+    void discard_tile_CPU(int i); // CPUが牌を捨てる機能
     void discard_tile_player(); // プレイヤーが牌を捨てる機能
     void get_tehuda_index(int &a, int &b, int &c); // 交換する牌の索引を入手する(牌の交換時に必要な情報)
     void generate_random_three(int &a, int &b, int &c, unsigned int size); // ランダムに異なる3つの数字を生成する

@@ -36,11 +36,12 @@ int main(){
 //    myMahjong.trade_tiles5();
 //    cout << "\n*** AFTER FIFTH TRADE ***\n";
 //    myMahjong.print_my_tile();
-    
+        
+    myMahjong.start_game(winds);
     
     
 
-    
+    myMahjong.print_my_tile(); // 牌が削除されてるか確認
     
     
     
