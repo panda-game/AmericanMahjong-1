@@ -158,6 +158,7 @@ void AmericanMahjong::print_my_tile(){ // 自分の牌を表示
         i++;
     }
     
+    /*
     //-------------CPU1~4の牌を表示------------------(※プログラム完成後削除する機能)
     cout  << "\n\nCPU1の牌: ";
     length = static_cast<unsigned int>(cp1Cards.size());
@@ -182,7 +183,8 @@ void AmericanMahjong::print_my_tile(){ // 自分の牌を表示
         print_tile(cp3Cards[i]);
         i++;
     }
-    
+     
+    */
     cout << endl << endl;
     
 }
@@ -404,12 +406,23 @@ void AmericanMahjong::start_game(Wind wind){
         discard_tile_CPU(i);
     }
     
-
+    while(i<10){
+        i++;
+        int j = i%4;
+        get_tile(j);
+        if(j == 0){ // jが4の倍数の時は自分が牌を捨てる
+            discard_tile_player();
+        } else { // jが4の倍数ではない時はCPUが牌を捨てる
+            discard_tile_CPU(j);
+        }
+    }
+    
 }
 
-void AmericanMahjong::get_tile(vector<Tiles*> cards){
-    cards.push_back(yama[tiles_left-1]); // yamaから一つ牌をcardsにプッシュする
-    if(cards == myCards){// プレイヤーの手札に牌が来た時は教えてあげる
+void AmericanMahjong::get_tile(int i){
+    cards[i]->push_back(yama[tiles_left-1]); // yamaから一つ牌をcardsにプッシュする
+    if(cards[i] == &myCards){// プレイヤーの手札に牌が来た時は教えてあげる
+        cout << "\n***YOUR TURN***" << endl;
         cout << "YOU GOT ";
         print_tile(yama[tiles_left-1]);
         cout << endl;
@@ -421,14 +434,22 @@ void AmericanMahjong::get_tile(vector<Tiles*> cards){
 
 
 void AmericanMahjong::discard_tile_CPU(int i){
-    int index = rand()%(static_cast<unsigned int>((*cards[i]).size())); // ランダムに捨てる牌の索引を生成
-    (*cards[i]).erase((*cards[i]).begin()+index); // 索引indexにあるタイルをベクターから削除
+    int index = rand()%(static_cast<unsigned int>(cards[i]->size())); // ランダムに捨てる牌の索引を生成
+    if(i == 1){ cout << "CPU1 DISCARDED "; print_tile(cp1Cards[index]); }
+    if(i == 2){ cout << "CPU2 DISCARDED "; print_tile(cp2Cards[index]); }
+    if(i == 3){ cout << "CPU3 DISCARDED "; print_tile(cp3Cards[index]); }
+    cards[i]->erase(cards[i]->begin()+index); // 索引indexにあるタイルをベクターから削除
+    cout << endl;
 }
 
 void AmericanMahjong::discard_tile_player(){
+    print_my_tile();
     cout << "SELECT INDEX OF TILE YOU WANT TO DISCARD: ";
     int index;
     cin >> index;
+    cout << "YOU DISCARDED ";
+    print_tile(myCards[index-1]);
+    cout << endl;
     myCards.erase(myCards.begin()+(index - 1)); // 索引の牌をベクターから削除
 }
 

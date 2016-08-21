@@ -49,7 +49,7 @@ public:
     void trade_tiles4(); // 向かい側の人と牌を交換(0~3個まで)
     void trade_tiles5(); // メッシュ交換
     void start_game(Wind wind); // ゲームを実際に開始する
-    void get_tile(vector<Tiles*> cards); // 牌を引く
+    void get_tile(int i); // 牌を引く
     void discard_tile_CPU(int i); // CPUが牌を捨てる機能
     void discard_tile_player(); // プレイヤーが牌を捨てる機能
     void get_tehuda_index(int &a, int &b, int &c); // 交換する牌の索引を入手する(牌の交換時に必要な情報)
