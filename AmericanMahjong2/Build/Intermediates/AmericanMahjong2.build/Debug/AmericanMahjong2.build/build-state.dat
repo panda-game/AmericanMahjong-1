@@ -190,14 +190,14 @@ t1394360369
 s5968
 
 N/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp
-c0000000057B913780000000000003F71
-t1471746936
-s16241
+c0000000057BE2F7E0000000000004B2B
+t1472081790
+s19243
 
 N/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.h
-c0000000057B8FE000000000000000ABE
-t1471741440
-s2750
+c0000000057BE2E010000000000000E5E
+t1472081409
+s3678
 
 N/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/Dice.cpp
 c0000000057B322D2000000000000009A
@@ -230,13 +230,13 @@ t1471357650
 s174
 
 N/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/main.cpp
-c0000000057B8F7840000000000000696
-t1471739780
-s1686
+c0000000057BAAD0D0000000000000647
+t1471851789
+s1607
 
 N/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.o
-t1471746936
-s353688
+t1472081791
+s361000
 
 N/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong2.LinkFileList
 c0000000057B322D20000000000000336
@@ -256,12 +256,12 @@ t1471357650
 s40308
 
 N/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.o
-t1471741441
-s108444
+t1472081410
+s108660
 
 N/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/AmericanMahjong2
-t1471746928
-s101632
+t1472081515
+s102104
 
 N/Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp
 c0000000057AD416600000000000029C0
@@ -458,11 +458,11 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies492e37f84a69bd41^680639f84a69bd41^---0#1#1#--18"Check dependencies36"3C39E662-C9A6-4EA5-9AB4-D2DD705B86AF-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies0b455afe666ebd41^d74b5bfe666ebd41^---0#1#1#--18"Check dependencies36"6A5AAC67-AA65-4BDF-8D20-99467D27D0AB-
 
 CCompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.o /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s493439736.217572
-e493439736.835936
+s493774590.356523
+e493774591.275801
 r1
 xCompileC
 xBuild/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.o
@@ -476,8 +476,8 @@ d/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/A
 d/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/Tiles.h
 d/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/Dice.h
 d/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/Wind.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp219"CompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.o AmericanMahjong2/AmericanMahjong.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilerbbd537f84a69bd41^4302d6f84a69bd41^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp0000000000000000^3394"CompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.o AmericanMahjong2/AmericanMahjong.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-generated-files.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-own-target-headers.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-all-target-headers.hmap -iquote /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-project-headers.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/DerivedSources/x86_64 -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/DerivedSources -F/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug -MMD -MT dependencies -MF /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.d --serialize-diagnostics /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.dia -c /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp -o /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.o36"D26C5557-0A8B-46E5-A7DB-DCE6B2BCA68F-
-bEF14FFCA-B265-4938-A3DB-3E857796C438
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp219"CompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.o AmericanMahjong2/AmericanMahjong.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler27685bfe666ebd41^dc9c46ff666ebd41^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp0000000000000000^3394"CompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.o AmericanMahjong2/AmericanMahjong.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-generated-files.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-own-target-headers.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-all-target-headers.hmap -iquote /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-project-headers.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/DerivedSources/x86_64 -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/DerivedSources -F/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug -MMD -MT dependencies -MF /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.d --serialize-diagnostics /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.dia -c /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp -o /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.o36"03BA6BE6-D1ED-41B5-A746-0013CA28E08C-
+bE3C499A9-2D66-410C-822D-922E47138CE4
 
 CCompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong.o /Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/AmericanMahjong.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s492665062.739537
@@ -605,8 +605,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile
 bDEA8A443-24EE-449A-A445-C85C6537E9D7
 
 CCompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.o /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s493434240.190875
-e493434241.402482
+s493774209.280141
+e493774210.113880
 r1
 xCompileC
 xBuild/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.o
@@ -620,8 +620,8 @@ d/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/A
 d/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/Tiles.h
 d/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/Dice.h
 d/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/Wind.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/main.cpp197"CompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.o AmericanMahjong2/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilerea0331803569bd41^310967813569bd41^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/main.cpp0000000000000000^3328"CompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.o AmericanMahjong2/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-generated-files.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-own-target-headers.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-all-target-headers.hmap -iquote /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-project-headers.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/DerivedSources/x86_64 -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/DerivedSources -F/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug -MMD -MT dependencies -MF /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.dia -c /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/main.cpp -o /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.o36"4F7435B7-17AC-46D4-8D77-926CFEBA23E3-
-bA2FD1E12-A0E8-43E7-A039-C9F0AEBCA484
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/main.cpp197"CompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.o AmericanMahjong2/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilerf0894981656ebd41^9a251d82656ebd41^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/main.cpp0000000000000000^3328"CompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.o AmericanMahjong2/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-generated-files.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-own-target-headers.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-all-target-headers.hmap -iquote /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/AmericanMahjong2-project-headers.hmap -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/DerivedSources/x86_64 -I/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/DerivedSources -F/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug -MMD -MT dependencies -MF /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.dia -c /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/AmericanMahjong2/main.cpp -o /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.o36"1194B540-6DDA-42AA-83E3-EF7CAEEA3180-
+b00DBD7A0-5EB1-4371-94BA-76921EA8BBB5
 
 CCompileC Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/main.o /Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/AmericanMahjong2/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s492664758.396640
@@ -662,8 +662,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile
 bDEA8A443-24EE-449A-A445-C85C6537E9D7
 
 CLd /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/AmericanMahjong2 normal x86_64
-s493439736.837954
-e493439736.861452
+s493774591.277066
+e493774591.411638
 r1
 xLd
 x/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/AmericanMahjong2
@@ -708,8 +708,8 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Link /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/AmericanMahjong254"Ld Build/Products/Debug/AmericanMahjong2 normal x86_649695d6f84a69bd41^3b89dcf84a69bd41^---0#0#1#--1118"Ld Build/Products/Debug/AmericanMahjong2 normal x86_64    cd /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug -F/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug -filelist /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong2.LinkFileList -mmacosx-version-min=10.9 -stdlib=libc++ -Xlinker -dependency_info -Xlinker /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong2_dependency_info.dat -o /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/AmericanMahjong236"A14B1D4A-702E-4169-B836-54ED3FA34B07-
-bEF14FFCA-B265-4938-A3DB-3E857796C438
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Link /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/AmericanMahjong254"Ld Build/Products/Debug/AmericanMahjong2 normal x86_64b1fb46ff666ebd41^cc6369ff666ebd41^---0#0#1#--1118"Ld Build/Products/Debug/AmericanMahjong2 normal x86_64    cd /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2    setenv MACOSX_DEPLOYMENT_TARGET 10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug -F/Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug -filelist /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong2.LinkFileList -mmacosx-version-min=10.9 -stdlib=libc++ -Xlinker -dependency_info -Xlinker /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Intermediates/AmericanMahjong2.build/Debug/AmericanMahjong2.build/Objects-normal/x86_64/AmericanMahjong2_dependency_info.dat -o /Users/ybn/Desktop/projects/AmericanMahjong/AmericanMahjong2/Build/Products/Debug/AmericanMahjong236"E273E9A1-32FB-46B5-AA58-FD614964E975-
+bE3C499A9-2D66-410C-822D-922E47138CE4
 
 CLd /Users/ybn/Desktop/projects/AmericanMahjong3/AmericanMahjong2/Build/Products/Debug/AmericanMahjong2 normal x86_64
 s492665063.812679

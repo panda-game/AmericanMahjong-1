@@ -52,6 +52,15 @@ public:
     void get_tile(int i); // 牌を引く
     void discard_tile_CPU(int i); // CPUが牌を捨てる機能
     void discard_tile_player(); // プレイヤーが牌を捨てる機能
+    int evalute_yaku(int i); // 役を評価し牌がそろっていたら点数を返す,揃っていない場合は-1を返す
+    void count_tileType(int &a, int &b, int &c, int &d, int &e, int &f,// 手札にフラワーとジョーカーの牌がいくつあるかカウントする
+                        int &g, int &h, int &i, int &j, int &k, int &l, int x);
+    /*
+    void count_krack_bamboo_dot(int &a, int &b, int &c, int i); // 手札にクラック、バンブー、ドットタイプの牌がいくつあるかカウントする
+    void count_dragons(int &a, int &b, int &c); // 手札にドラゴンの牌がいくつあるかカウントする
+    void count_winds(int &a, int &b, int &c, int &d); // 手札にウィンドの牌がいくつあるかカウントする
+    void count_flower_joker(int &a, int &b); // 手札にフラワーとジョーカーの牌がいくつあるかカウントする
+     */
     void get_tehuda_index(int &a, int &b, int &c); // 交換する牌の索引を入手する(牌の交換時に必要な情報)
     void generate_random_three(int &a, int &b, int &c, unsigned int size); // ランダムに異なる3つの数字を生成する
 };
