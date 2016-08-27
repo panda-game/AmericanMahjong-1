@@ -29,6 +29,7 @@ class AmericanMahjong
     vector<Tiles*> cp3Cards; // CP3手札用ポインタ
     vector<Tiles*> tmpCards; // ソート用の一時的なベクター
     vector<vector<Tiles*>*> cards; // ベクターのベクター
+    vector<int> num_each_tiles;
 public:
     AmericanMahjong(); // コンストラクタ
     ~AmericanMahjong(); // デストラクタ
@@ -55,10 +56,9 @@ public:
     void get_tile(int i); // 牌を引く
     void discard_tile_CPU(int i); // CPUが牌を捨てる機能
     void discard_tile_player(); // プレイヤーが牌を捨てる機能
-    int evalute_yaku(int i); // 役を評価し牌がそろっていたら点数を返す,揃っていない場合は-1を返す
+    int evaluate_yaku(int i); // 役を評価し牌がそろっていたら点数を返す,揃っていない場合は-1を返す
     int  count_type(char type); // 引数のタイプをいくつ所持しているかを返す
-    void count_tileType(int &a, int &b, int &c, int &d, int &e, int &f,// 手札にフラワーとジョーカーの牌がいくつあるかカウントする
-                        int &g, int &h, int &i, int &j, int &k, int &l, int x);
+    void count_tileType(int x); // 手札にフラワーとジョーカーの牌がいくつあるかカウントする
     /*
     void count_krack_bamboo_dot(int &a, int &b, int &c, int i); // 手札にクラック、バンブー、ドットタイプの牌がいくつあるかカウントする
     void count_dragons(int &a, int &b, int &c); // 手札にドラゴンの牌がいくつあるかカウントする
