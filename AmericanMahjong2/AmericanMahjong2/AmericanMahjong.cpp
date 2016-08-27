@@ -138,6 +138,32 @@ void AmericanMahjong::sort_player_tiles(){ // プレイヤーのカードをソ�
               });
 }
 
+void AmericanMahjong::pon() {
+    
+    print_my_tile();
+    
+    if (count_type(discardType) <= 1) {
+        cout << "\n UNABLE TO PON \n";
+        return;
+    }
+    
+    cout << "SELECT INDEX OF TILE YOU WANT TO PON: ";
+
+    int index1, index2;
+    cin >> index1 >> index2;
+    
+    if (index1 > 0 && index2 > 0)
+    {
+        cout << "YOU DISCARDED ";
+        print_tile(myCards[index1-1]);
+        print_tile(myCards[index2-1]);
+        cout << endl;
+        myCards.erase(myCards.begin()+(index1 - 1)); // 索引の牌をベクターから削除
+        myCards.erase(myCards.begin()+(index2 - 2)); // 索引の牌をベクターから削除
+    }
+}
+
+//void AmericanMahjong::print_my_tile(){ cout << yama[0].type << ' ' << yama[0].data << endl;}
 void AmericanMahjong::print_my_tile(){ // 自分の牌を表示
     //-------------プレーヤーの牌を表示----------------
     cout  << "プレーヤー: ";
@@ -465,6 +491,9 @@ void AmericanMahjong::discard_tile_CPU(int i){
     if(i == 3){ cout << "CPU3 DISCARDED "; print_tile(cp3Cards[index]); }
     cards[i]->erase(cards[i]->begin()+index); // 索引indexにあるタイルをベクターから削除
     cout << endl;
+    
+    // プレイヤーがポンを行うかチェック
+    pon();
 }
 
 void AmericanMahjong::discard_tile_player(){
@@ -515,9 +544,25 @@ int AmericanMahjong::evaluate_yaku(int i){
     return 0;
 }
 
+int AmericanMahjong::count_type(char type){
+    int count = 0;
+    char myData;
+    cout << "\naaaaaaaaaaaaa:";
+    cout << type;
+    for(int index=0; index<myCards.size(); index++){
+        myData = myCards[index]->type + myCards[index]->data;
+        cout << myData << ' ';
+        if (myData == type)
+        {
+            count++;
+        }
+    }
+    cout << count << ' ';
+    return count;
+}
+    
 void AmericanMahjong::count_tileType(int x){
     int i=0;
-    
     for(int y=0; y<cards[x]->size(); y++){
         if( (*cards[x])[y]->type == 'a') num_each_tiles[i]++;
         if( (*cards[x])[y]->type == 'b') num_each_tiles[i+1]++;

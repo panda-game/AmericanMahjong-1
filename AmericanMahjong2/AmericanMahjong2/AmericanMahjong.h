@@ -17,6 +17,7 @@ class AmericanMahjong
 {
     const int NUMTILE = 152; //　全体の牌の数
     int tiles_left; // 山に残った牌の数. 牌が配られる度にtiles_left--され,0になるとゲーム終了
+    char discardType; // 前のプレイヤーが捨てた牌
     vector<Tiles*> yama;// 山の牌を格納するベクター
     vector<Tiles*> tehuda1; // 親用 tehuda1のみ開始時に14個牌を格納する
     vector<Tiles*> tehuda2; // tehuda2~4は子用で開始時に13個牌を格納する
@@ -43,6 +44,8 @@ public:
     void print_my_tile(); // 手札を表示
     void print_tile(Tiles* ptr); // 牌の情報を表示する
     void sort_player_tiles(); // 牌をソート
+    void pon(); // ぽん
+    void pon_check(); // ぽんチェック
     void print_introduction(int gameCount, Wind wind); // 今回のサイコロの数字と各プレーヤーの風を表示
     void trade_tiles1(); //　牌を交換する(1回目)
     void trade_tiles2(); //　牌を交換する(2回目)
@@ -54,6 +57,7 @@ public:
     void discard_tile_CPU(int i); // CPUが牌を捨てる機能
     void discard_tile_player(); // プレイヤーが牌を捨てる機能
     int evaluate_yaku(int i); // 役を評価し牌がそろっていたら点数を返す,揃っていない場合は-1を返す
+    int  count_type(char type); // 引数のタイプをいくつ所持しているかを返す
     void count_tileType(int x); // 手札にフラワーとジョーカーの牌がいくつあるかカウントする
     /*
     void count_krack_bamboo_dot(int &a, int &b, int &c, int i); // 手札にクラック、バンブー、ドットタイプの牌がいくつあるかカウントする
