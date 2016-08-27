@@ -395,6 +395,26 @@ void AmericanMahjong::start_game(Wind wind){
     cards.push_back(&cp2Cards);
     cards.push_back(&cp3Cards);
     
+    int num_krack=0, num_bamboo=0, num_dot=0;
+    int num_red=0, num_green=0, num_soap=0;
+    int num_east=0, num_west=0, num_south=0, num_north=0;
+    int num_flower=0, num_joker=0;
+    
+    num_each_tiles.push_back(num_krack);
+    num_each_tiles.push_back(num_bamboo);
+    num_each_tiles.push_back(num_dot);
+    num_each_tiles.push_back(num_red);
+    num_each_tiles.push_back(num_green);
+    num_each_tiles.push_back(num_soap);
+    num_each_tiles.push_back(num_east);
+    num_each_tiles.push_back(num_west);
+    num_each_tiles.push_back(num_south);
+    num_each_tiles.push_back(num_north);
+    num_each_tiles.push_back(num_flower);
+    num_each_tiles.push_back(num_joker);
+    
+    
+    
     int i;
     if(wind.myWind[0] == "EAST"){
         i=0;
@@ -418,7 +438,7 @@ void AmericanMahjong::start_game(Wind wind){
         }
     }
     
-    evalute_yaku(0);
+    evaluate_yaku(0);
     
     
 }
@@ -452,6 +472,11 @@ void AmericanMahjong::discard_tile_player(){
     cout << "SELECT INDEX OF TILE YOU WANT TO DISCARD: ";
     int index;
     cin >> index;
+    while(!(index > 0 && index <= 14)){
+        cin.ignore(256,'\n');
+        cout << "INDEX OUT OF RANGE, TRY AGAIN: ";
+        cin >> index;
+    }
     cout << "YOU DISCARDED ";
     print_tile(myCards[index-1]);
     cout << endl;
@@ -459,19 +484,26 @@ void AmericanMahjong::discard_tile_player(){
 }
 
 
-int AmericanMahjong::evalute_yaku(int i){
+int AmericanMahjong::evaluate_yaku(int i){
     /*
      ---------役の評価について----------
      1. 手札構成を確認する
      2. ??                   */
-    int num_krack=0, num_bamboo=0, num_dot=0;
-    int num_red=0, num_green=0, num_soap=0;
-    int num_east=0, num_west=0, num_south=0, num_north=0;
-    int num_flower=0, num_joker=0;
+    count_tileType(0);
     
-    count_tileType(num_krack, num_bamboo, num_dot, num_red, num_green, num_soap, num_east, num_west, num_south, num_north, num_flower, num_joker, 0);
+    int num_kinds = 0;
     
-    cout << "YOU GOT...\n" << num_krack << " KRACKS, " << num_bamboo << " BAMBOOS, " << num_dot << " DOTS." << endl;
+    for(int i=0; i<12; i++){ // num_each_tileには12種類の牌のそれぞれの個数が保存されている
+        if(num_each_tiles[i] != 0) num_kinds++;
+    }
+    
+    cout << "YOU GOT...\n" << num_each_tiles[0] << " KRACKS, " << num_each_tiles[1]
+    << " BAMBOOS, " << num_each_tiles[2] << " DOTS." << endl;
+    
+    cout << "THERE ARE " << num_kinds << " KINDS OF TILES IN TEHUDA." << endl;
+
+    
+    
     
     /*
     count_krack_bamboo_dot(num_krack, num_bamboo, num_dot, 0); // クラック、バンブー、ドット牌の数をカウントする
@@ -483,20 +515,22 @@ int AmericanMahjong::evalute_yaku(int i){
     return 0;
 }
 
-void AmericanMahjong::count_tileType(int &a, int &b, int &c, int &d, int &e, int &f, int &g, int &h, int &i, int &j, int &k, int &l, int x){
+void AmericanMahjong::count_tileType(int x){
+    int i=0;
+    
     for(int y=0; y<cards[x]->size(); y++){
-        if( (*cards[x])[y]->type == 'a') a++;
-        if( (*cards[x])[y]->type == 'b') b++;
-        if( (*cards[x])[y]->type == 'c') c++;
-        if( (*cards[x])[y]->type == 'd') d++;
-        if( (*cards[x])[y]->type == 'e') e++;
-        if( (*cards[x])[y]->type == 'f') f++;
-        if( (*cards[x])[y]->type == 'g') g++;
-        if( (*cards[x])[y]->type == 'h') h++;
-        if( (*cards[x])[y]->type == 'i') i++;
-        if( (*cards[x])[y]->type == 'j') j++;
-        if( (*cards[x])[y]->type == 'k') k++;
-        if( (*cards[x])[y]->type == 'l') l++;
+        if( (*cards[x])[y]->type == 'a') num_each_tiles[i]++;
+        if( (*cards[x])[y]->type == 'b') num_each_tiles[i+1]++;
+        if( (*cards[x])[y]->type == 'c') num_each_tiles[i+2]++;
+        if( (*cards[x])[y]->type == 'd') num_each_tiles[i+3]++;
+        if( (*cards[x])[y]->type == 'e') num_each_tiles[i+4]++;
+        if( (*cards[x])[y]->type == 'f') num_each_tiles[i+5]++;
+        if( (*cards[x])[y]->type == 'g') num_each_tiles[i+6]++;
+        if( (*cards[x])[y]->type == 'h') num_each_tiles[i+7]++;
+        if( (*cards[x])[y]->type == 'i') num_each_tiles[i+8]++;
+        if( (*cards[x])[y]->type == 'j') num_each_tiles[i+9]++;
+        if( (*cards[x])[y]->type == 'k') num_each_tiles[i+10]++;
+        if( (*cards[x])[y]->type == 'l') num_each_tiles[i+11]++;
     }
 }
 
@@ -537,10 +571,25 @@ void AmericanMahjong::count_flower_joker(int &a, int &b, int i){
 void AmericanMahjong::get_tehuda_index(int &a, int &b, int &c){
     cout << "\nFIRST TILE INDEX:";
     cin >> a;
+    while(!(a > 0 && a <= 14)){
+        cin.ignore(256,'\n');
+        cout << "INDEX OUT OF RANGE, TRY AGAIN: ";
+        cin >> a;
+    }
     cout << "SECOND TILE INDEX:";
+    while(!(b > 0 && b <= 14)){
+        cin.ignore(256,'\n');
+        cout << "INDEX OUT OF RANGE, TRY AGAIN: ";
+        cin >> b;
+    }
     cin >> b;
     cout << "THIRD TILE INDEX:";
     cin >> c;
+    while(!(c > 0 && c <= 14)){
+        cin.ignore(256,'\n');
+        cout << "INDEX OUT OF RANGE, TRY AGAIN: ";
+        cin >> c;
+    }
 }
 
 
