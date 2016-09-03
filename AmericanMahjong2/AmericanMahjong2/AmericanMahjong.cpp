@@ -489,7 +489,7 @@ void AmericanMahjong::discard_tile_CPU(int i){
     if(i == 1){ cout << "CPU1 DISCARDED "; print_tile(cp1Cards[index]); }
     if(i == 2){ cout << "CPU2 DISCARDED "; print_tile(cp2Cards[index]); }
     if(i == 3){ cout << "CPU3 DISCARDED "; print_tile(cp3Cards[index]); }
-    discardType = (*cards[i])[index]->type + static_cast<char>((*cards[i])[index]->data);
+    discardType = (*cards[i])[index]->type + to_string((*cards[i])[index]->data);
     cards[i]->erase(cards[i]->begin()+index); // 索引indexにあるタイルをベクターから削除
     cout << endl;
     
@@ -545,11 +545,11 @@ int AmericanMahjong::evaluate_yaku(int i){
     return 0;
 }
 
-int AmericanMahjong::count_type(char type){
+int AmericanMahjong::count_type(string type){
     int count = 0;
-    char myData;
+    string myData;
     for(int index=0; index<myCards.size(); index++){
-        myData = myCards[index]->type + static_cast<char>(myCards[index]->data);
+        myData = myCards[index]->type + to_string(myCards[index]->data);
         cout << myData << ' ';
         if (myData == type)
         {
