@@ -48,9 +48,11 @@ public:
     void swap_ptrs_index(int index1, int index2); //索引1と索引2のポインタを入れ替える
     void print_my_tile(); // 手札を表示
     void print_tile(Tiles* ptr); // 牌の情報を表示する
+    void print_cp1_tile(); // cp1の手札を表示
+    void print_cp2_tile(); // cp2の手札を表示
+    void print_cp3_tile(); // cp3の手札を表示
     void sort_player_tiles(); // 牌をソート
-    void pon(); // ぽん
-    void pon_check(); // ぽんチェック
+    void pon(int wind); // ぽん
     void print_introduction(int gameCount, Wind wind); // 今回のサイコロの数字と各プレーヤーの風を表示
     void trade_tiles1(); //　牌を交換する(1回目)
     void trade_tiles2(); //　牌を交換する(2回目)
@@ -62,7 +64,7 @@ public:
     void discard_tile_CPU(int i); // CPUが牌を捨てる機能
     void discard_tile_player(); // プレイヤーが牌を捨てる機能
     int evaluate_yaku(int i); // 役を評価し牌がそろっていたら点数を返す,揃っていない場合は-1を返す
-    int  count_type(string type); // 引数のタイプをいくつ所持しているかを返す
+    int  count_type(int ponPlayer, string type); // 引数のタイプをいくつ所持しているかを返す
     void count_tileType(int x); // 手札にフラワーとジョーカーの牌がいくつあるかカウントする
     /*
     void count_krack_bamboo_dot(int &a, int &b, int &c, int i); // 手札にクラック、バンブー、ドットタイプの牌がいくつあるかカウントする

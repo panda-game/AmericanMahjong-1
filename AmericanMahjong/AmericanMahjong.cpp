@@ -138,41 +138,115 @@ void AmericanMahjong::sort_player_tiles(){ // プレイヤーのカードをソ�
               });
 }
 
-void AmericanMahjong::pon() {
+void AmericanMahjong::pon(int j) {
+   
+    int discardPlayer  = j % 4;
+    int startPonPlayer = (discardPlayer + 1) % 4;
     
-    print_my_tile();
+    while (startPonPlayer != discardPlayer) {
+        // ポンが出来るかチェック
+        if (count_type(startPonPlayer, discardType) <= 1) {
+            cout << "\n UNABLE TO PON \n";
+            
+            // ポンの権利が次の人へ
+            startPonPlayer = (startPonPlayer + 1) % 4;
+            continue;
+        }
     
-    if (count_type(discardType) <= 1) {
-        cout << "\n UNABLE TO PON \n";
-        return;
-    }
-    
-    cout << "\nSELECT INDEX OF TILE YOU WANT TO PON:\n";
-    print_my_tile();
+        cout << "\nSELECT INDEX OF TILE YOU WANT TO PON:\n";
+        if (startPonPlayer == 0) {
+            print_my_tile();
+        } else if (startPonPlayer == 1) {
+            print_cp1_tile();
+        } else if (startPonPlayer == 2) {
+            print_cp2_tile();
+        } else {
+            print_cp3_tile();
+        }
 
-    int index1, index2;
-    cin >> index1 >> index2;
+        int index1, index2;
+        cin >> index1 >> index2;
     
-    if (index1 > 0 && index2 > 0)
-    {
-        cout << "YOU DISCARDED ";
-        print_tile(myCards[index1-1]);
-        print_tile(myCards[index2-1]);
-        cout << endl;
+        if (index1 > 0 && index2 > 0)
+        {
+            cout << startPonPlayer << "DISCARDED ";
+            if (startPonPlayer == 0) {
+                print_tile(myCards[index1-1]);
+                print_tile(myCards[index2-1]);
+                cout << endl;
         
-        // ポインタを格納
-        Tiles *ptr = myCards[index1-1];
-        myPons.push_back(ptr);
-        Tiles *ptr2 = myCards[index2-1];
-        myPons.push_back(ptr2);
+                // ポインタを格納
+                Tiles *ptr = myCards[index1-1];
+                myPons.push_back(ptr);
+                Tiles *ptr2 = myCards[index2-1];
+                myPons.push_back(ptr2);
         
-        myCards.erase(myCards.begin()+(index1 - 1)); // 索引の牌をベクターから削除
-        myCards.erase(myCards.begin()+(index2 - 2)); // 索引の牌をベクターから削除
+                myCards.erase(myCards.begin()+(index1 - 1)); // 索引の牌をベクターから削除
+                myCards.erase(myCards.begin()+(index2 - 2)); // 索引の牌をベクターから削除
+            
+                cout << "\n print pon tiles \n";
+                print_tile(myPons[0]);
+                print_tile(myPons[1]);
+            } else if (startPonPlayer == 1) {
+                print_tile(cp1Cards[index1-1]);
+                print_tile(cp1Cards[index2-1]);
+                cout << endl;
+                
+                // ポインタを格納
+                Tiles *ptr = cp1Cards[index1-1];
+                cp1Pons.push_back(ptr);
+                Tiles *ptr2 = cp1Cards[index2-1];
+                cp1Pons.push_back(ptr2);
+                
+                cp1Cards.erase(cp1Cards.begin()+(index1 - 1)); // 索引の牌をベクターから削除
+                cp1Cards.erase(cp1Cards.begin()+(index2 - 2)); // 索引の牌をベクターから削除
+                
+                cout << "\n print pon tiles \n";
+                print_tile(cp1Pons[0]);
+                print_tile(cp1Pons[1]);
+            } else if (startPonPlayer == 2) {
+                print_tile(cp2Cards[index1-1]);
+                print_tile(cp2Cards[index2-1]);
+                cout << endl;
+                
+                // ポインタを格納
+                Tiles *ptr = cp2Cards[index1-1];
+                cp2Pons.push_back(ptr);
+                Tiles *ptr2 = cp2Cards[index2-1];
+                cp2Pons.push_back(ptr2);
+                
+                cp2Cards.erase(cp2Cards.begin()+(index1 - 1)); // 索引の牌をベクターから削除
+                cp2Cards.erase(cp2Cards.begin()+(index2 - 2)); // 索引の牌をベクターから削除
+                
+                cout << "\n print pon tiles \n";
+                print_tile(cp2Pons[0]);
+                print_tile(cp2Pons[1]);
+            }  else {
+                print_tile(cp3Cards[index1-1]);
+                print_tile(cp3Cards[index2-1]);
+                cout << endl;
+                
+                // ポインタを格納
+                Tiles *ptr = cp3Cards[index1-1];
+                cp3Pons.push_back(ptr);
+                Tiles *ptr2 = cp3Cards[index2-1];
+                cp3Pons.push_back(ptr2);
+                
+                cp3Cards.erase(cp3Cards.begin()+(index1 - 1)); // 索引の牌をベクターから削除
+                cp3Cards.erase(cp3Cards.begin()+(index2 - 2)); // 索引の牌をベクターから削除
+                
+                cout << "\n print pon tiles \n";
+                print_tile(cp3Pons[0]);
+                print_tile(cp3Pons[1]);
+                cout << "\n \n";
+            }
+            
+            break;
+        }
+        
+        // ポンの権利が次の人へ
+        startPonPlayer = (startPonPlayer + 1) % 4;
     }
-    
-    cout << "\n print pon tiles \n";
-    print_tile(myPons[0]);
-    print_tile(myPons[1]);
 }
 
 //void AmericanMahjong::print_my_tile(){ cout << yama[0].type << ' ' << yama[0].data << endl;}
@@ -226,6 +300,65 @@ void AmericanMahjong::print_my_tile(){ // 自分の牌を表示
     */
     cout << endl << endl;
     
+}
+
+void AmericanMahjong::print_cp1_tile(){ // 自分の牌を表示
+    //-------------プレーヤーの牌を表示----------------
+    cout  << "CP1: ";
+    int length = static_cast<unsigned int>(cp1Cards.size());
+    int i=0;
+    while(i<length){
+        print_tile(cp1Cards[i]);
+        cout << ' ';
+        i++;
+    }
+    
+    // 捨てる牌を選択するときの数字
+    i=0;
+    cout << "\n牌選択用:   ";
+    while(i<length){
+        cout << left << setw(4) << i+1 ;
+        i++;
+    }
+}
+void AmericanMahjong::print_cp2_tile(){ // 自分の牌を表示
+    //-------------プレーヤーの牌を表示----------------
+    cout  << "CP2: ";
+    int length = static_cast<unsigned int>(cp2Cards.size());
+    int i=0;
+    while(i<length){
+        print_tile(cp2Cards[i]);
+        cout << ' ';
+        i++;
+    }
+    
+    // 捨てる牌を選択するときの数字
+    i=0;
+    cout << "\n牌選択用:   ";
+    while(i<length){
+        cout << left << setw(4) << i+1 ;
+        i++;
+    }
+}
+
+void AmericanMahjong::print_cp3_tile(){ // 自分の牌を表示
+    //-------------プレーヤーの牌を表示----------------
+    cout  << "CP3: ";
+    int length = static_cast<unsigned int>(cp3Cards.size());
+    int i=0;
+    while(i<length){
+        print_tile(cp3Cards[i]);
+        cout << ' ';
+        i++;
+    }
+    
+    // 捨てる牌を選択するときの数字
+    i=0;
+    cout << "\n牌選択用:   ";
+    while(i<length){
+        cout << left << setw(4) << i+1 ;
+        i++;
+    }
 }
 
 void AmericanMahjong::print_tile(Tiles* ptr){
@@ -457,13 +590,21 @@ void AmericanMahjong::start_game(Wind wind){
     if(wind.myWind[0] == "EAST"){
         i=0;
         discard_tile_player();
+        
+        // ポンを行うかチェック
+        pon(i);
     }
     else {
         if(wind.myWind[1] == "EAST") i=1;
         else if(wind.myWind[2] == "EAST") i=2;
         else i=3;
         discard_tile_CPU(i);
+        
+        // ポンを行うかチェック
+        pon(i);
     }
+    
+
     
     while(i<tiles_left){
         i++;
@@ -474,6 +615,9 @@ void AmericanMahjong::start_game(Wind wind){
         } else { // jが4の倍数ではない時はCPUが牌を捨てる
             discard_tile_CPU(j);
         }
+
+        // ポンを行うかチェック
+        pon(j);
     }
     
     evaluate_yaku(0);
@@ -504,9 +648,6 @@ void AmericanMahjong::discard_tile_CPU(int i){
     discardType = (*cards[i])[index]->type + to_string((*cards[i])[index]->data);
     cards[i]->erase(cards[i]->begin()+index); // 索引indexにあるタイルをベクターから削除
     cout << endl;
-    
-    // プレイヤーがポンを行うかチェック
-    pon();
 }
 
 void AmericanMahjong::discard_tile_player(){
@@ -521,6 +662,7 @@ void AmericanMahjong::discard_tile_player(){
     }
     cout << "YOU DISCARDED ";
     print_tile(myCards[index-1]);
+    discardType = myCards[index-1]->type + to_string(myCards[index-1]->data);
     cout << endl;
     myCards.erase(myCards.begin()+(index - 1)); // 索引の牌をベクターから削除
 }
@@ -557,16 +699,46 @@ int AmericanMahjong::evaluate_yaku(int i){
     return 0;
 }
 
-int AmericanMahjong::count_type(string type){
+int AmericanMahjong::count_type(int ponPlayer, string type){
     int count = 0;
     string myData;
-    for(int index=0; index<myCards.size(); index++){
-        myData = myCards[index]->type + to_string(myCards[index]->data);
-        if (myData == type)
-        {
-            count++;
+
+    if (ponPlayer == 0) {
+        // プレイヤー
+        for(int index=0; index<cp1Cards.size(); index++){
+            myData = cp1Cards[index]->type + to_string(cp1Cards[index]->data);
+            if (myData == type) {
+                count++;
+            }
+        }
+    } else {
+        // CPU
+        if (ponPlayer == 1) {
+            for(int index=0; index<cp1Cards.size(); index++){
+                myData = cp1Cards[index]->type + to_string(cp1Cards[index]->data);
+                if (myData == type) {
+                    count++;
+                }
+            }
+        } else if (ponPlayer == 2){
+            for(int index=0; index<cp2Cards.size(); index++){
+                myData = cp2Cards[index]->type + to_string(cp2Cards[index]->data);
+                if (myData == type) {
+                    count++;
+                }
+            }
+        } else {
+            for(int index=0; index<cp3Cards.size(); index++){
+                myData = cp3Cards[index]->type + to_string(cp3Cards[index]->data);
+                if (myData == type) {
+                    count++;
+                }
+            }
         }
     }
+    
+    cout << ponPlayer << ' ';
+    cout << type << ' ';
     cout << count << ' ';
     return count;
 }

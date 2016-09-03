@@ -56,7 +56,7 @@
 		0C12E82B1D5A67BE007A5860 = {
 			isa = PBXGroup;
 			children = (
-				0C12E8361D5A67BE007A5860 /* AmericanMahjong2 */,
+				0C12E8361D5A67BE007A5860 /* AmericanMahjong */,
 				0C12E8351D5A67BE007A5860 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +69,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0C12E8361D5A67BE007A5860 /* AmericanMahjong2 */ = {
+		0C12E8361D5A67BE007A5860 /* AmericanMahjong */ = {
 			isa = PBXGroup;
 			children = (
 				0C12E8371D5A67BE007A5860 /* main.cpp */,
@@ -83,7 +83,7 @@
 				0C12E8461D5A686D007A5860 /* Wind.cpp */,
 				0C12E8471D5A686D007A5860 /* Wind.h */,
 			);
-			path = AmericanMahjong2;
+			path = AmericanMahjong;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +115,7 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Yujiro Nakanishi";
 			};
-			buildConfigurationList = 0C12E82F1D5A67BE007A5860 /* Build configuration list for PBXProject "AmericanMahjong2" */;
+			buildConfigurationList = 0C12E82F1D5A67BE007A5860 /* Build configuration list for PBXProject "AmericanMahjong" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -234,7 +234,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C12E82F1D5A67BE007A5860 /* Build configuration list for PBXProject "AmericanMahjong2" */ = {
+		0C12E82F1D5A67BE007A5860 /* Build configuration list for PBXProject "AmericanMahjong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C12E83B1D5A67BE007A5860 /* Debug */,
