@@ -147,7 +147,8 @@ void AmericanMahjong::pon() {
         return;
     }
     
-    cout << "SELECT INDEX OF TILE YOU WANT TO PON: ";
+    cout << "\nSELECT INDEX OF TILE YOU WANT TO PON:\n";
+    print_my_tile();
 
     int index1, index2;
     cin >> index1 >> index2;
@@ -158,9 +159,20 @@ void AmericanMahjong::pon() {
         print_tile(myCards[index1-1]);
         print_tile(myCards[index2-1]);
         cout << endl;
+        
+        // ポインタを格納
+        Tiles *ptr = myCards[index1-1];
+        myPons.push_back(ptr);
+        Tiles *ptr2 = myCards[index2-1];
+        myPons.push_back(ptr2);
+        
         myCards.erase(myCards.begin()+(index1 - 1)); // 索引の牌をベクターから削除
         myCards.erase(myCards.begin()+(index2 - 2)); // 索引の牌をベクターから削除
     }
+    
+    cout << "\n print pon tiles \n";
+    print_tile(myPons[0]);
+    print_tile(myPons[1]);
 }
 
 //void AmericanMahjong::print_my_tile(){ cout << yama[0].type << ' ' << yama[0].data << endl;}
@@ -453,7 +465,7 @@ void AmericanMahjong::start_game(Wind wind){
         discard_tile_CPU(i);
     }
     
-    while(i<20){
+    while(i<tiles_left){
         i++;
         int j = i%4;
         get_tile(j);
@@ -550,7 +562,6 @@ int AmericanMahjong::count_type(string type){
     string myData;
     for(int index=0; index<myCards.size(); index++){
         myData = myCards[index]->type + to_string(myCards[index]->data);
-        cout << myData << ' ';
         if (myData == type)
         {
             count++;
